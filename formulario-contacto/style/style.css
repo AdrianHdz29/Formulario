@@ -1,0 +1,114 @@
+body{
+    background-color: hsl(148, 38%, 91%);
+    font-family: 'Karla', sans-serif;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.bold-size{
+    font-size: 32px;
+    font-weight: 600;
+}
+.form-control, .form-check-input {
+    border-radius: 8px;
+}
+.btn-submit {
+    background-color: hsl(169, 82%, 27%);
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+}
+.btn-submit:hover {
+    background-color: hsl(169, 82%, 27%);
+}
+.form-check-label {
+    font-size: 14px;
+}
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+.radio-option {
+    flex: 1;
+    border: 1px solid hsl(186, 15%, 59%);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+}
+.bor-tint{
+    border: 1px solid hsl(186, 15%, 59%);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.form-check-input:checked {
+    background-color: hsl(169, 82%, 27%);
+    border-color: hsl(169, 82%, 27%);
+}
+.form-check-input[type="radio"]:checked {
+    background-color: hsl(169, 82%, 27%);
+    border-color: hsl(169, 82%, 27%);
+}
+input[type="text"]:hover,
+input[type="email"]:hover, 
+textarea:hover {
+    border-color: hsl(169, 82%, 27%); /* Naranja */
+    transition: border-color 0.3s ease-in-out;
+}
+button[type="submit"]:hover {
+    color: white;
+    font-weight: 600;
+}
+/* Cambia el color del div cuando su radio button está seleccionado */
+.radio-option:has(input:checked) {
+    background-color: hsla(169, 82%, 27%, 30%); /* Amarillo */
+    transition: background-color 0.3s ease-in-out;
+}
+.radio-option input:checked + label {
+    border-color: hsl(165, 81%, 34%);
+}
+
+.alert-success {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 400px;
+    background-color: hsl(187, 24%, 22%);
+    color: white;
+    border: 1px solid hsl(187, 24%, 22%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+    border-radius: 8px;
+    text-align: left;
+    padding: 10px;
+    font-size: 0.8rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../assets/fonts/static/Karla-Regular.ttf') format('truetype'),
+         url('../assets/fonts/static/fonts/Karla-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}

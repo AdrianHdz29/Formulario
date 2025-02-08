@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de Contacto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: hsl(148, 38%, 91%); /* Color de fondo */
+        }
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-control, .form-check-input {
+            border-radius: 8px;
+        }
+        .btn-submit {
+            background-color: #0B6841;
+            color: white;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background-color: #085230;
+        }
+        .form-check-label {
+            font-size: 14px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+        .radio-option {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container vh-100 d-flex align-items-center">
+        <div class="contact-form">
+            <h4 class="text-center mb-3">Contact Us</h4>
+            <form>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="firstName" class="form-label">First Name *</label>
+                        <input type="text" id="firstName" class="form-control" required>
+                    </div>
+                    <div class="col">
+                        <label for="lastName" class="form-label">Last Name *</label>
+                        <input type="text" id="lastName" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Query Type *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="queryType" id="general" class="form-check-input">
+                            <label for="general">General Enquiry</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="queryType" id="support" class="form-check-input">
+                            <label for="support">Support Request</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea id="message" class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" id="consent" class="form-check-input">
+                    <label for="consent" class="form-check-label">I consent to being contacted by the team *</label>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+form{
+    background-color: white;
+    width: 700px;
+    height: 750px;
+    border-radius: 15px;
+}
+.sec1{
+    grid-area: name;
+}
+.sec2{
+    grid-area: last;
+}
+.sec3{
+    grid-area: email;
+}
+.sec4{
+    grid-area: radio;
+}
+.sec5{
+    grid-area: mesage;
+}
+.sec6{
+    grid-area: check;
+}
+.sec7{
+    grid-area: boton;
+}
+.contener {
+    display: grid;
+    grid-template-areas:
+    'name last'
+    'email email'
+    'radio radio'
+    'mesage mesage'
+    'check check'
+    'boton boton';
+}
+.label-force {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.forced {
+    color: red;
+    font-weight: bold;
+}
+.tfformat{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.tfformat label{
+    font-size: 16px;
+}
+.rgs{
+    font-size: 20px;
+}
+
+.t1{
+    font-weight: 700;
+    font-size: 32px;
+}
+.radios{
+    display: inline-flex;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../assets/fonts/static/Karla-Regular.ttf') format('truetype'),
+         url('../assets/fonts/static/fonts/Karla-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
